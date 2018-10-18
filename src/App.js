@@ -1,9 +1,18 @@
-import React, { Component } from "react";
+import React from 'react'
 
-class App extends Component {
-  render() {
-    return <div>Hello World</div>;
-  }
-}
+import MainPage from './MainPage'
+import { HeadProvider } from 'react-head';
+import HeadOfTheMainPage from './HeadOfMainPage';
+import { IconContext } from "react-icons";
+
+
+const App = props => (
+    <HeadProvider>
+        <IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
+            <HeadOfTheMainPage/>
+            <MainPage/>
+        </IconContext.Provider>
+    </HeadProvider>
+);
 
 export default App;
