@@ -6,7 +6,7 @@ import 'bootstrap3/dist/js/bootstrap.js';
 import App from './App';
 
 
-
+//  ssh root@138.68.68.89 -i .\juices_k
 // https://medium.freecodecamp.org/i-built-this-now-what-how-to-deploy-a-react-app-on-a-digitalocean-droplet-662de0fe3f48
 ReactDOM.render(<App />, document.getElementById('root'));
 
