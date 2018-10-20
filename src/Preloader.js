@@ -6,9 +6,7 @@ export default class Preloader extends Component {
         return (
             <div id="preloader">
                 <div id="status">
-                    <p style={{color: "orange"}} className="wow pulse infinite" dataWowDuration="8s">
-                        Loading
-                    </p>
+                    <FaCocktail style={{color: "orange"}} className="wow pulse infinite" data-wow-duration="8s"/>
                 </div>
             </div>
         );

@@ -12,7 +12,7 @@ import Preloader from "./Preloader";
 export default class MainPage extends Component {
     componentDidMount() {
         require('./js/lib');
-        new WOW.WOW().init();
+        new WOW.WOW({live: false}).init();
     }
 
     render() {

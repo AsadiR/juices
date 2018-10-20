@@ -1,63 +1,82 @@
 import React, {Component} from 'react'
 import {
-  CallToAction, Flex, Heading, Subhead, Hero, ScrollDownIndicator
+  CallToAction, ScrollDownIndicator
 } from 'react-landing-page'
 
 import styled from 'styled-components';
 
-const TextBlock = styled.div`
-    border-radius: 50%;
-    border: 2px solid #73AD21;
-    padding: 20px; 
-    width: 50%;
-    margin: auto;
-    background: #EEE8AA;
-`;
 const trainglify_bg = require("./img/trianglify-background.svg");
+const StyledHero = styled.div`
+    background: url(${trainglify_bg}) no-repeat;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+        src=${trainglify_bg},
+        sizingMethod='scale');
+    color: mediumseagreen;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    width: 100%;
+    padding: 0;
+    margin: 0;
+`;
+
+const RoundedImg = styled.img`
+    border-radius: 5%;
+    width: 100%;
+    height: auto;
+`;
+
 
 export default class HeroArea extends Component {
     render() {
         return (
-            <Hero
-                id="hero"
-                color='mediumseagreen'
-                backgroundImage={trainglify_bg} no-repeat
-            >
-                <Flex flexWrap='wrap' alignItems='center'>
-                    <Flex alignItems='flex-start' width={[1, 1, 1, 5/6]} p={1} m="auto">
-                        <img className="wow fadeInUp"
-                             style={{marginLeft: "14%", width: "20%", borderRadius: "5%", maxHeight: "45%"}}
+            <StyledHero id="hero" className="container">
+                <div className="row image-row">
+                    <div className="col-xs-6 col-md-3 img1-offset">
+                        <RoundedImg className="wow fadeInUp"
                              src={require("./img/juices/2.jpg")}
                              alt="Самый-Сок"/>
-                        <img className="wow fadeInUp"
-                             style={{marginLeft: "-2%", marginTop: "5%", width: "20%", borderRadius: "5%", maxHeight: "45%"}}
+                    </div>
+                    <div className="col-xs-6 col-md-3 img2-offset">
+                        <RoundedImg className="wow fadeInUp"
                              src={require("./img/juices/1.jpg")}
                              alt="Самый-Сок"/>
-                        <img className="wow fadeInUp"
-                             style={{marginLeft: "-2%", width: "20%", borderRadius: "5%", maxHeight: "45%"}}
+                    </div>
+                    <div className="col-xs-6 col-md-3 img3-offset">
+                        <RoundedImg className="wow fadeInUp"
                              src={require("./img/juices/3.jpg")}
                              alt="Самый-Сок"/>
-                        <img className="wow fadeInUp"
-                             style={{marginLeft: "-2%", marginTop: "5%", width: "20%", borderRadius: "5%", maxHeight: "45%"}}
+                    </div>
+                    <div className="col-xs-6 col-md-3 img4-offset">
+                        <RoundedImg className="wow fadeInUp"
                              src={require("./img/juices/4.jpg")}
                              alt="Самый-Сок"/>
-                    </Flex>
-                    <Flex width={[1, 1, 1, 1]} alignItems='center'
-                          flexDirection='column' p={3} m={"auto"} mt={3}
-                          className="wow fadeInDown"
-                    >
-                        <Heading fontSize={["2em", "3em"]} style={{textAlign: "center"}}>Хочешь быть бодрым и веселым?</Heading>
-                        <Subhead fontSize={["1.5em", "2em"]} style={{textAlign: "center"}}>Свежевыжатый сок поможет тебе в этом!</Subhead>
-                        <Flex mt={3} flexWrap='wrap' justifyContent='center'>
-                            <CallToAction fontSize={["1em", "2em"]} href="#services" bg="mediumseagreen" color="white">
+                    </div>
+                </div>
+
+                <div className="row action-row" style={{width: "100%"}}>
+                    <div className="col-xs-12 wow fadeInDown">
+                        <h3 className="stroke" style={{textAlign: "center", marginTop: ".5em"}}>
+                            Хочешь быть бодрым и веселым?
+                        </h3>
+                        <h4 className="stroke" style={{textAlign: "center"}}>
+                            Свежевыжатый сок поможет тебе в этом!
+                        </h4>
+                        <div style={{textAlign: "center", marginTop: "1em", marginBottom: "5em"}}>
+                            <CallToAction className="stroke" fontSize={["1em", "2em", "3em", "3em"]} href="#services"
+                                          bg="mediumseagreen" color="white">
                                 Заказать сок
                             </CallToAction>
-                        </Flex>
-                    </Flex>
-                </Flex>
-                <ScrollDownIndicator style={{color: "darkgreen"}}/>
-            </Hero>
+                        </div>
+                    </div>
+                </div>
+                <ScrollDownIndicator style={{color: "darkgreen", position: "relative"}}/>
+            </StyledHero>
         );
     }
 }
+
 

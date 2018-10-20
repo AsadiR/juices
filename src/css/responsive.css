@@ -1,17 +1,84 @@
+p, .normal-text {
+    line-height: 1.5em;
+    color: black;
+    font-weight: lighter;
+}
+
+.action-row {
+    width: 100%;
+    margin: auto;
+}
+
+@media only screen  and (min-width: 981px){
+    .image-row {
+        margin-top: 5%;
+        margin-left: 15%;
+    }
+
+    .img1-offset {
+        margin-top: 5%;
+    }
+
+    .img2-offset {
+        margin-left: -5%;
+    }
+
+    .img3-offset {
+        margin-top: 5%;
+        margin-left: -5%;
+    }
+
+    .img4-offset {
+        margin-left: -5%;
+    }
+
+    p, .normal-text {font-size: 2em;}
+    h2{font-size: 4em;}
+    h3{font-size: 3.25em;}
+    h4{font-size: 3em; line-height: 1.4em;}
+}
+
+@media only screen  and (min-width: 1200px){
+    p, .normal-text {font-size: 2em;}
+    h2{font-size: 3em;}
+    h3{font-size: 2.8em;}
+    h4{font-size: 2em; line-height: 1.4em;}
+}
+
+
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 1024px) {    
-    /*HREO AREA */
-    #hero{max-height: 660px;}    
-    
-    /* FEATURED CLIENTS SECTION*/
-    #clients img{height: 50px;}
+@media only screen and (max-width : 1024px) {
+    p, .normal-text {font-size: 2em;}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 980px) {
-    
-    /*HREO AREA */
-    #hero{height: 540px;}
+    .image-row {
+        margin: auto;
+        margin-top: 5%;
+        width: 80%;
+    }
+
+    .img1-offset {
+        padding: 1%;
+    }
+
+    .img2-offset {
+        padding: 1%;
+    }
+
+    .img3-offset {
+        padding: 1%;
+    }
+
+    .img4-offset {
+        padding: 1%;
+    }
+
+    h2{font-size: 4em;}
+    h3{font-size: 4em;}
+    h4{font-size: 3.5em; line-height: 1.4em;}
+    p, .normal-text {font-size: 2em;}
     
     /*ABOUT SECTION*/
     #about{padding-top: 40px;}
@@ -44,17 +111,15 @@
 
 /* Mobile Devices */
 @media only screen and (max-width : 640px) {
-    
-    h2 {font-size: 1.9em;}
-    h3{font-size: 1.5em}
-    h4{font-size: 1.1em;}
-    
-    
+
+    h2 {font-size: 2.5em;}
+    h3{font-size: 2em}
+    h4{font-size: 1.5em;}
+    p, .normal-text {font-size: 1.5em;}
+
+
     .myphoto{display: none;}
 
-    
-    /*Hero area*/
-    #hero{height: 400px;}    
     .herocontent{padding-top: 30px;}
     
     /*About section*/
@@ -67,14 +132,12 @@
 
 /* Smaller Mobile Devices */
 @media only screen and (max-width : 480px) {
-    #hero{height: 320px;}    
     #clients {display: none;}
     .footersocial li{font-size: 1.5em}
 }
 
 /* Smallest Mobile Devices */
 @media only screen and (max-width : 320px) {
-    #hero{height: 480px;}
     .herocontent{padding-top: 100px; padding-bottom: 30px;}
 
 }

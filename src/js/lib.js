@@ -7,12 +7,14 @@ jQuery.fn.load = function(callback){ $(window).on("load", callback) };
 //========================
 //PRELOADER
 //========================
+
 $(window).load(function() { // makes sure the whole site is loaded
 	$('#status').fadeOut(); // will first fade out the loading animation
 	$('#preloader').delay(350).fadeOut('slow');
     // will fade out the white DIV that covers the website.
-	$('body').delay(350).css({'overflow':'visible'});
+	$('body').delay(350).css({'overflow': 'visible'});
 });
+
 //========================
 //CUSTOM SCROLLBAR
 //========================
@@ -29,7 +31,7 @@ $("html").niceScroll({
 //========================
 $(function() {
   $('a[href*="#"]').not('a[href="#"]').click(function() {
-    if (window.location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && window.location.hostname == this.hostname) {
+    if (window.location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && window.location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
@@ -62,7 +64,7 @@ $(function() {
                 .removeClass('animated fadeOutUp')
                 .addClass('animated fadeInDown')
                 .fadeIn();
-                
+
             } else {
                 $('.navbar')
                 .removeClass('animated fadeInDown')

@@ -41,6 +41,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "core-js": "^2.5.7",
     "popper.js": "^1.14.4"
   }
 }

@@ -16,7 +16,7 @@ export default class NavBar extends Component {
                             <span className="icon-bar"/>
                         </button>
 
-                        <a className="navbar-brand" href="#hero">
+                        <a className="normal-text navbar-brand" href="#hero">
                             <span className="brandicon icon-grid"/>
                             <span className="brandname">Самый-Сок</span>
                         </a>
@@ -25,23 +25,23 @@ export default class NavBar extends Component {
                     <div className="collapse navbar-collapse">
                         <ul className="nav navbar-nav navbar-right">
                             <li>
-                                <a href="#about">
+                                <a className="normal-text" href="#about">
                                     <span className="btnicon icon-user"/>О нас
                                 </a>
                             </li>
                             <li>
-                                <a href="#services">
+                                <a className="normal-text" href="#services">
                                     <FaCocktail style={{color: "gray"}} className="btnicon"/>Заказать сок
                                 </a>
                             </li>
                             <li>
-                                <a href="#testimonials">
+                                <a className="normal-text" href="#testimonials">
                                     <span className="btnicon icon-bubble"/>Отзывы
                                 </a>
                             </li>
 
                             <li>
-                                <a href="#pagefooter">
+                                <a className="normal-text" href="#pagefooter">
                                     <span className="btnicon icon-envelope-open"/>Контакты
                                 </a>
                             </li>
