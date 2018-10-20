@@ -66,6 +66,7 @@ export default class ServiceSection extends Component {
                     <Card className="panel-body wow fadeInUp" data-wow-duration="3s">
                         <p>Одна бутылочка объемом 300 мл стоит 250 рублей.</p>
                         <p>При заказе 6 и более скидка 25% (200 рублей за штуку).</p>
+                        <p>Доставка в пределах МКАД стоит 350 рублей.</p>
                         <p>При заказе от 2000 доставка бесплатно. </p>
                         <br/>
                         <p>
